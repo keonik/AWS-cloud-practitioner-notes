@@ -361,7 +361,32 @@ DDoS mitigation challenges - complex setup and implementation, bandwidth limitat
 
 Standard - auto protection of any resource or regions in AWS, quick detection, automated mitigation techniques, and self service (no need to engage AWS support)
 
+## Security Compliance
 
+### Shared Responsibility
+AWS - Provide secure controlled platform and wide array of security features
+Customer - Configure IT to support your ops
+
+### Assurance programs
+
+Certification/attestations
+Legal support
+Alignment/frameworks
+
+AWS Perform security tests to their compliance certification rules.
+
+
+
+## Knowledge Check
+
+Which of the following is managed DDoS protection service?
+
+Amazon Inspector
+AWS Trusted Advisor
+AWS Identity and Access Management
+AWS Shield
+
+Answer: AWS Shield
 
 # Compare the different methods of interacting with AWS
 
