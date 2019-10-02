@@ -388,10 +388,142 @@ AWS Shield
 
 Answer: AWS Shield
 
-# Compare the different methods of interacting with AWS
+# Module 6 Pricing and Support
 
-# Describe and differentiate between AWS service domains
+## Pricing Details
 
-# Describe basic AWS Cloud architectural principles
+### Pay for
+- Compute capacity
+- Storage
+- Outbound data transfer (aggregated)
 
-# Describe security services with the AWS cloud
+
+### No charge for
+- Inbound data transfer
+- data transfer between services
+
+
+## Amazon EC2
+Cost factors
+- Clock-second/hourly billing
+  - Resources incur charges only when running
+- Instance config
+  - Physical capacity of the instance
+  - Varies based on
+    - AWS region
+    - OS
+    - number of coures
+    - memory
+
+### On-demand instances
+- compute capacity by the hour and second
+- min 60 secs
+
+### Reserved instances
+- low or no up-front payment instances reserved
+- discount on hourly charge for that instance
+
+### Spot instances
+- bid for unused ec2 capacity
+
+### Other considerations
+#### Number of instances
+- provision multiple instance to handle peak loads
+
+#### Load balancing
+- Use Elastic load balancing to distribute traffic
+- Monthly cost based on:
+  - hours load balancers run
+  - data load balancer processes
+
+### Product options
+#### Monitoring
+- Amazon CloudWatch
+#### Auto Scaling
+Auto scaling...
+
+
+## Amazon S3
+### Cost considerations
+#### Storage classes
+Standard
+- 99.99999999999% durability
+- 99.99% avail
+
+SIA 
+- same durability
+- 99.9% availability
+
+Storage Cost
+- number and size of objects
+- type of storage
+
+Requests
+- PUTS get different rates than GETS
+- number of requests
+### Amazon EBS
+Volume types
+- General purposed SSD
+- Provisioned IOPS SSD
+- Magnetic
+
+Snapshots
+- Added cost per GB-month of data stored
+- Data Transfer
+  - inbound free
+  - outbound tiered for discounts
+
+## Amazon RDS
+Cost efficient and resizeable capacity
+### Cost factors
+- clock-hour billing - charges when running
+- db characteristics - Engine, size, memory
+- DB purchase type - on-demand (by hour), reserved(up front), etc.
+- provisioned storage 
+  - no additional storage for 100% of storage
+  - backups terminated DB instance billed GB/month
+- Deployment type
+  - storage and I/O charges vary
+  - single avail
+  - multi avail zones
+
+## Amazon CloudFront
+
+Hosting content to serve to multiple regions
+
+## AWS Trusted Advisor
+
+Cost Optimization, Performance, Security, Fault Tolerance
+
+Saved over 500 million for customers
+
+## AWS Support Plans
+
+Plans to help your needs and hosting. 
+
+## Knowledge Check
+
+Which of the following statements best describes AWS Trusted Advisor?
+
+A. A tool that estimates the cost savings when using AWS and provides a detailed set of reports
+B. A tool that helps customers estimate their monthly AWS bill more efficiently
+C. A tool that enables you to view and analyze your costs and usage
+D. A tool that provides you real time guidance to help you provision your resources following AWS best practices.
+
+Answer - D. A tool that provides you real time guidance to help you provision your resources following AWS best practices
+
+
+
+# End of modules
+## Recommend resources to review before exam
+
+- https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+- https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+- https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
+- https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf
+- https://aws.amazon.com/premiumsupport/plans/
+  
+
+Take some practice exams and then go get your certificate!
+
+https://aws.amazon.com/certification/certified-cloud-practitioner/
