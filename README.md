@@ -527,3 +527,218 @@ Answer - D. A tool that provides you real time guidance to help you provision yo
 Take some practice exams and then go get your certificate!
 
 https://aws.amazon.com/certification/certified-cloud-practitioner/
+
+# Continued Notes from Pluralsight AWS Certification course
+
+Regions contain 2 or more availability zones
+
+## Shared Responsibility
+
+AWS is responsible for security of the cloud.
+- Access and Training for Amazon employees
+- Global Data Centers and Underlying Network
+- Hardware for Global Infrastructure
+- Configuration Management for Infrastructure
+- Patching cloud Infrastructure and Services
+
+Customer is responsible for security in the cloud
+- Individual Access to cloud resources and training
+- Data security and encryption (in transit and at rest)
+- Operating System, Network, and Firewall configuration
+- All code deployed onto cloud infrastructure
+- Patching Guest OS and Custom Applications
+
+## Economics of the Cloud
+
+### Capitalized Expenditure (CapEx)
+
+Building a Data center, upfront costs for the building, servers, and support equipment. Expense to attain a fixed asset.
+
+### Operating Expenditure (OpEx)
+
+Regular day to day expenses of a business. Ongoing connectivity, utility, maintenance costs.
+
+AWS takes care of the potential unused CapEx and up-front costs.  Managed scaling for OpEx. 
+
+### AWS Cost Explorer
+
+User Interface for exploring your AWS Costs
+Provides breakdowns including
+- By service
+- By cost tag
+
+Provides predictions for the next three months of cost
+Gives recommendations for cost optimization
+Can be accessed via API
+
+### AWS Organizations
+
+Allows organizations to manage multiple accounts under a single master account
+Provides orgs with the ability to leverage consolidated billing for all accounts
+Enables organzations to centralize logging and security standards across accounts
+
+## Architecture on AWS
+
+### Well Architected Framework
+
+- Operational Excellence - running and monitoring systems for business value
+- Security - Protecting Info and business assets
+- Reliability - Enabling infrastructure to recover from disruptions
+  - Fault tolerance
+  - High availability
+- Performance Efficiency - Using resources efficiently to achieve business value
+- Cost optimization - Achieving minimal costs for the desired value
+
+### AWS Disaster Recovery Approaches
+- Backup and Restore 
+- Pilot Light - minimal resources are setup in AWS to support a DR event
+- Warm Standby - Systems are running in AWS and can be scaled up for DR
+- Multi-Site - systems are running on two regions and support users
+
+### Basic Support
+
+Provided for all aws customers
+Access to Trusted Advisor (only 7 core checks)
+24 x 7 access to customer service, documentation, forums, and whitepapers
+
+### Developer Support
+
+Includes all features of basic support
+Business hours access to support engineers
+$29 per month(tied to usage)
+Limited to 1 Primary contact
+
+### Business Support
+
+Include all Developer support
+Full set of Trusted Advisor Checks
+24 x 7 phone, email, and chat access to support engineers
+Unlimited contacts
+$100 per month(tied to usage)
+
+### Enterprise Support
+Includes all Business support
+Include Designated Technical Account Manager (TAM)
+Includes concierge support team
+$15000 per month (tied to usage)
+
+## AWS Services
+
+#### AWS Console
+
+Users leverage browser to configure resources
+
+#### AWS CLI
+
+Command line access
+
+#### AWS SDK
+
+Programmatic access
+
+### Networking and Content Delivery 
+
+#### Amazon Route 53
+
+DNS service(yes service-ception).High availability service(service goes down and you can still provide same level of service).  
+
+#### Amazon VPC
+
+Enables virtual networks
+Supports IPv4 and IPv6
+Supports public and private subnets
+Can utilize NAT for private subnets
+Enables connection to your data center
+Can connect to other VPC's
+Supports private connections to many AWS services
+
+#### Amazon Direct Connect
+
+Easy to establish a dedicated network connection from your premises to AWS.
+
+#### Amazon API Gateway
+
+
+#### Amazon CloudFront
+
+Content delivery network
+Enables users to get content from closest server to them
+Supports static and dynamic content
+Uses AWS edge locations
+Includes advanced security features 
+- AWS Shield for DDoS
+- AWS WAF (firewall)
+
+#### Amazon Elastic Load Balancing
+Distribute traffic across multiple targets
+Supports one or more availability zones but only one region
+Three types
+- Application load balancer
+- Network LB
+- Classic LB
+
+## Security on AWS
+
+Security and compliance is a shared responsibility between AWS and the customer
+
+### AWS Identity and Access Management (IAM)
+
+Control access to services
+Free
+Manage both authentication and authorization
+Support Identity federation
+
+Users - physical user accounts
+Groups - manage permissions for group of IAM users
+Roles - assume permissions for a task
+
+Policies in AWS IAM
+JSON doc that defines permissions for an AWS IAM identity (principal)
+Defines both AWS services that the identity can access and what actiosn they can perform
+
+##### Best practices in IAM
+MFA - multi-factor auth
+Least Privilege Access - only users who are granted access that require it for their current tasks should have it
+
+#### Security in Amazon VPS
+
+Security Groups - Enables firewall-like controls for resource within VPC
+Network ACL's - controls inbound and outbound traffic for subnets within VPC
+Flow logs - captures info arround traffic within your VPC
+
+##### Additional Security Services
+
+- AWS CloudTrail - logging of all actions taken within your AWS account
+- AWS Shield - Provides detection and mitigation of DDoS attacks
+- AWS Web Application Firewall - configurable web app for common exploitations
+
+### Compute Services on AWS
+
+#### Amazon EC2
+
+OS and additional software are provided in a AMI (Amazon machine image)
+Resources are provided by instance type
+Instances can store data in two ways
+- Instance store
+  - only available while instance is running
+- Elastic Block Store (EBS)
+  - persistent storage
+
+Types 
+- General Purpose
+- Comput, Memory, and Storage
+- Accelerated computing
+
+Scaling
+- Vertical Scaling - some down time
+- Horizontal Scaling - launch instances to help scaling
+  - Auto-Scaling Group - 
+    - set of EC2 instances
+    - Min/Max # of instances
+    - Health checks on each instance
+    - Scaling policies that define scaling behavior
+    - Exists within 1 or more availability zones in a single region
+  - Elastic Load Balancer
+
+#### AWS Lambda
+
