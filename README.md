@@ -27,6 +27,8 @@ Reduce risk(being agile), secure data(using common models or integrating securit
 3. Efficiency
 4. Expediency
 
+##### 2. Elasticity
+
 ## Differentiate between cloud computing and deployment models
 
 ### EC2 - Elastic Cloud Compute
@@ -92,7 +94,7 @@ availability zones
 
 Answer: Availability zones
 
-### Amazon Virtual Private Close (VPC)
+### Amazon Virtual Private Cloud (VPC)
 
 Region based networking tool to control allowed internet gateways, subnets of both private and public resources.
 
@@ -100,7 +102,6 @@ Region based networking tool to control allowed internet gateways, subnets of bo
 
 Measures to filter traffic to your AWS instances.
 Using VPC's you can generate security groups that act as firewalls through a series of rules to access your instances.
-
 
 ## Knowledge Check
 
@@ -114,7 +115,6 @@ You can create many subnets in a VPC, though fewer is recommended to limit compl
 Answer: You can create many subnets in a VPC, though fewer is recommended to limit complexity
 
 # Define the billing, account management, and pricing models for the AWS platform
-
 
 # Module 3 Integrated Services
 
@@ -139,7 +139,7 @@ Ensures you have correct number of EC2 instances available to handle the load. M
 
 ## Amazon Route 53
 
-Create DNS Zones for your applications. 
+Create DNS Zones for your applications.
 
 ## Knowledge Check
 
@@ -154,11 +154,11 @@ Answer: Elastic Load Balancing
 
 ## Amazon Relational Database Service (RDS)
 
-Manages OS install and patches, backups, availability, scaling, etc. so you can focus on application performance. 
+Manages OS install and patches, backups, availability, scaling, etc. so you can focus on application performance.
 
 ## AWS Lambda
 
-Serverless computing. 
+Serverless computing.
 Use cases: Continuous scaling. Automated backups, IoT, serverless sites, etc.
 
 ## AWS Elastic Beanstalk
@@ -170,7 +170,7 @@ Platform as a service, quick deployment, reduce management complexity.
 What's the first step to using AWS Lambda?
 
 Deploy an OS image
-Upload your Code 
+Upload your Code
 Provision EC2 instances
 Pay for estimated compute time
 
@@ -182,7 +182,7 @@ Pub/Sub messaging (email sms). Subscribe email or phone or other things to get n
 
 ## Amazon CloudWatch
 
-Metrics for your AWS services such as CPU utilization, status check failures, State changes, snapshots. Lets you set alarms that trigger other services. Can Stop,terminate, or reboot services. 
+Metrics for your AWS services such as CPU utilization, status check failures, State changes, snapshots. Lets you set alarms that trigger other services. Can Stop,terminate, or reboot services.
 
 ## Amazon CloudFront
 
@@ -194,7 +194,7 @@ Simplify tasks of repeatably and predictable nature. Take in JSON or YAML format
 
 ## Knowledge Check
 
-Which of the following best describes amazon CloudFront? 
+Which of the following best describes amazon CloudFront?
 Provides a common language for you to describe and provision all the infrastructure resources in your cloud environment
 Speeds up the delivery of your content to viewers across the globe
 Provides you with data and actionable insights to monitor your applications
@@ -211,16 +211,17 @@ Answer: Speeds up the delivery of your content to viewers across the globe
 ### Security
 
 IAM - Identity and access management
-Detective controls - integrate auditing controls of logs 
-Infrastructure protection - allowing only those who are allowed through rules 
+Detective controls - integrate auditing controls of logs
+Infrastructure protection - allowing only those who are allowed through rules
 Data protection - data backup, replication, classification, encryption
 Incident response - process made to respond and mitigate security incidents
 
 #### Design Principles
-Implement security at all layers 
+
+Implement security at all layers
 Enable traceability - logs
 Apply principle of least privelege - access controls and authentication
-Focus on securing your system - 
+Focus on securing your system -
 Automate - scalability and cost efficiency
 
 ### Reliability
@@ -238,15 +239,15 @@ Failure management
 Test recovery procedures - simulate failures and test reactions before an actual failure
 Automatically recover - automate your recovery plans before they occur
 Scale horizontally - fault tolerence using multiple small resources
-Stop guessing capacity - 
-Manage change in automation - 
+Stop guessing capacity -
+Manage change in automation -
 
 ### Performance Efficiency
 
-Select customizable solutions - Ones where you can support scaling for the possible 
+Select customizable solutions - Ones where you can support scaling for the possible
 Review to continually innovate - always look at the newest tools to ensure you're using the best solution for your hosting
 Monitor AWS services - Amazon Lambda and many more
-Consider trade-offs - 
+Consider trade-offs -
 
 #### Design Principles
 
@@ -261,7 +262,7 @@ Have mechanical sympathy
 Continual process of refinement of a system to maximize ROI
 
 Use cost-effective resources
-Matching supply with demand 
+Matching supply with demand
 Increase expenditure awareness
 Optimize over time
 
@@ -281,12 +282,12 @@ Define the standards to manage daily ops
 
 ## Fault Tolerance and High Availability
 
-Fault tolerance - ability of a system to remain operational. Built in redundancy. 
+Fault tolerance - ability of a system to remain operational. Built in redundancy.
 High Avail - keeping your service available the most amount of time
 
 ### High Availability tools
 
-Elastic Load Balancers - distribute incoming traffic. 
+Elastic Load Balancers - distribute incoming traffic.
 Elastic IP address - static IP addresses. Mask failures. Continues to access apps if an instance fails.
 Route 53 - translate domain names to IP addresses. Geo-location routing, health checks, latency checks, etc.
 Auto Scaling - terminate/launch instances.
@@ -295,16 +296,16 @@ Amazon CouldWatch - distributed statistics gathering system. Tracks metrics of i
 ### Fault tolerant tools
 
 Amazon Simple Queue Service (SQS) - email notification service etc.
-Amazon Simple storage service (S3) - backup to storage of files 
+Amazon Simple storage service (S3) - backup to storage of files
 Amazon Relational Database Service (RDS) - scaled, fault tolerant database, automate backups
 
 ## Web Hosting
 
-Traditionally this would cost more because you have to maintain and manually control all the resources yourself. Amazon takes care of all of this reducing cost, handling traffic spikes, and testing resources. 
+Traditionally this would cost more because you have to maintain and manually control all the resources yourself. Amazon takes care of all of this reducing cost, handling traffic spikes, and testing resources.
 
 ## Knowledge Check
 
-Which of the following is NOT a pillar of the AWS Well-architected framework? 
+Which of the following is NOT a pillar of the AWS Well-architected framework?
 Persistence
 Operational Excellence
 Security
@@ -318,9 +319,10 @@ Answer: Persistence
 
 Both you and AWS is responsible for security.
 Layers of the app
+
 - Physical - done by AWS to provide secure network
 - Network - uses AWS network and compliant
-- Hypervisor - AWS runs this to ensure we can run many instances without any concer
+- Hypervisor - AWS runs this to ensure we can run many instances without any concern
 - Guest OS - AWS Has not control in this
 - Application - AWS has no control into the app
 - User Data - AWS has no control of user data
@@ -338,7 +340,7 @@ If a hacker gets your info (username, password) and you have no 2FA, they could 
 
 ## Knowledge check
 
-Your web app requires temp auth to use AEWS services. Which IAM entity should be used?
+Your web app requires temp auth to use AWS services. Which IAM entity should be used?
 
 User
 Role
@@ -351,7 +353,7 @@ Answer: Role
 
 Automated tool to inspect security vulnerabilities and deviations from best practices related to security.
 
-Streamline security compliance, increase dev agility, enforce security standards, integrate security into devops. 
+Streamline security compliance, increase dev agility, enforce security standards, integrate security into devops.
 
 ## AWS Shield
 
@@ -364,6 +366,7 @@ Standard - auto protection of any resource or regions in AWS, quick detection, a
 ## Security Compliance
 
 ### Shared Responsibility
+
 AWS - Provide secure controlled platform and wide array of security features
 Customer - Configure IT to support your ops
 
@@ -374,8 +377,6 @@ Legal support
 Alignment/frameworks
 
 AWS Perform security tests to their compliance certification rules.
-
-
 
 ## Knowledge Check
 
@@ -393,18 +394,20 @@ Answer: AWS Shield
 ## Pricing Details
 
 ### Pay for
+
 - Compute capacity
 - Storage
 - Outbound data transfer (aggregated)
 
-
 ### No charge for
+
 - Inbound data transfer
 - data transfer between services
 
-
 ## Amazon EC2
+
 Cost factors
+
 - Clock-second/hourly billing
   - Resources incur charges only when running
 - Instance config
@@ -412,74 +415,97 @@ Cost factors
   - Varies based on
     - AWS region
     - OS
-    - number of coures
+    - number of cores
     - memory
 
 ### On-demand instances
+
 - compute capacity by the hour and second
 - min 60 secs
 
 ### Reserved instances
+
 - low or no up-front payment instances reserved
 - discount on hourly charge for that instance
 
 ### Spot instances
+
 - bid for unused ec2 capacity
 
 ### Other considerations
+
 #### Number of instances
+
 - provision multiple instance to handle peak loads
 
 #### Load balancing
+
 - Use Elastic load balancing to distribute traffic
 - Monthly cost based on:
   - hours load balancers run
   - data load balancer processes
 
 ### Product options
+
 #### Monitoring
+
 - Amazon CloudWatch
+
 #### Auto Scaling
+
 Auto scaling...
 
-
 ## Amazon S3
+
 ### Cost considerations
+
 #### Storage classes
+
 Standard
+
 - 99.99999999999% durability
 - 99.99% avail
 
-SIA 
+SIA
+
 - same durability
 - 99.9% availability
 
 Storage Cost
+
 - number and size of objects
 - type of storage
 
 Requests
+
 - PUTS get different rates than GETS
 - number of requests
+
 ### Amazon EBS
+
 Volume types
+
 - General purposed SSD
 - Provisioned IOPS SSD
 - Magnetic
 
 Snapshots
+
 - Added cost per GB-month of data stored
 - Data Transfer
   - inbound free
   - outbound tiered for discounts
 
 ## Amazon RDS
-Cost efficient and resizeable capacity
+
+Cost efficient and resizable capacity
+
 ### Cost factors
+
 - clock-hour billing - charges when running
 - db characteristics - Engine, size, memory
 - DB purchase type - on-demand (by hour), reserved(up front), etc.
-- provisioned storage 
+- provisioned storage
   - no additional storage for 100% of storage
   - backups terminated DB instance billed GB/month
 - Deployment type
@@ -499,7 +525,7 @@ Saved over 500 million for customers
 
 ## AWS Support Plans
 
-Plans to help your needs and hosting. 
+Plans to help your needs and hosting.
 
 ## Knowledge Check
 
@@ -512,9 +538,8 @@ D. A tool that provides you real time guidance to help you provision your resour
 
 Answer - D. A tool that provides you real time guidance to help you provision your resources following AWS best practices
 
-
-
 # End of modules
+
 ## Recommend resources to review before exam
 
 - https://d0.awsstatic.com/whitepapers/aws-overview.pdf
@@ -522,7 +547,6 @@ Answer - D. A tool that provides you real time guidance to help you provision yo
 - https://d0.awsstatic.com/whitepapers/aws_pricing_overview.pdf
 - https://media.amazonwebservices.com/AWS_TCO_Web_Applications.pdf
 - https://aws.amazon.com/premiumsupport/plans/
-  
 
 Take some practice exams and then go get your certificate!
 
@@ -535,6 +559,7 @@ Regions contain 2 or more availability zones
 ## Shared Responsibility
 
 AWS is responsible for security of the cloud.
+
 - Access and Training for Amazon employees
 - Global Data Centers and Underlying Network
 - Hardware for Global Infrastructure
@@ -542,6 +567,7 @@ AWS is responsible for security of the cloud.
 - Patching cloud Infrastructure and Services
 
 Customer is responsible for security in the cloud
+
 - Individual Access to cloud resources and training
 - Data security and encryption (in transit and at rest)
 - Operating System, Network, and Firewall configuration
@@ -558,12 +584,13 @@ Building a Data center, upfront costs for the building, servers, and support equ
 
 Regular day to day expenses of a business. Ongoing connectivity, utility, maintenance costs.
 
-AWS takes care of the potential unused CapEx and up-front costs.  Managed scaling for OpEx. 
+AWS takes care of the potential unused CapEx and up-front costs. Managed scaling for OpEx.
 
 ### AWS Cost Explorer
 
 User Interface for exploring your AWS Costs
 Provides breakdowns including
+
 - By service
 - By cost tag
 
@@ -574,8 +601,8 @@ Can be accessed via API
 ### AWS Organizations
 
 Allows organizations to manage multiple accounts under a single master account
-Provides orgs with the ability to leverage consolidated billing for all accounts
-Enables organzations to centralize logging and security standards across accounts
+Provides organizations with the ability to leverage consolidated billing for all accounts
+Enables organizations to centralize logging and security standards across accounts
 
 ## Architecture on AWS
 
@@ -590,7 +617,8 @@ Enables organzations to centralize logging and security standards across account
 - Cost optimization - Achieving minimal costs for the desired value
 
 ### AWS Disaster Recovery Approaches
-- Backup and Restore 
+
+- Backup and Restore
 - Pilot Light - minimal resources are setup in AWS to support a DR event
 - Warm Standby - Systems are running in AWS and can be scaled up for DR
 - Multi-Site - systems are running on two regions and support users
@@ -605,7 +633,7 @@ Access to Trusted Advisor (only 7 core checks)
 
 Includes all features of basic support
 Business hours access to support engineers
-$29 per month(tied to usage)
+\$29 per month(tied to usage)
 Limited to 1 Primary contact
 
 ### Business Support
@@ -614,13 +642,14 @@ Include all Developer support
 Full set of Trusted Advisor Checks
 24 x 7 phone, email, and chat access to support engineers
 Unlimited contacts
-$100 per month(tied to usage)
+\$100 per month(tied to usage)
 
 ### Enterprise Support
+
 Includes all Business support
 Include Designated Technical Account Manager (TAM)
 Includes concierge support team
-$15000 per month (tied to usage)
+\$15000 per month (tied to usage)
 
 ## AWS Services
 
@@ -636,11 +665,11 @@ Command line access
 
 Programmatic access
 
-### Networking and Content Delivery 
+### Networking and Content Delivery
 
 #### Amazon Route 53
 
-DNS service(yes service-ception).High availability service(service goes down and you can still provide same level of service).  
+DNS service(yes service-ception).High availability service(service goes down and you can still provide same level of service).
 
 #### Amazon VPC
 
@@ -658,21 +687,23 @@ Easy to establish a dedicated network connection from your premises to AWS.
 
 #### Amazon API Gateway
 
-
 #### Amazon CloudFront
 
 Content delivery network
 Enables users to get content from closest server to them
 Supports static and dynamic content
 Uses AWS edge locations
-Includes advanced security features 
+Includes advanced security features
+
 - AWS Shield for DDoS
 - AWS WAF (firewall)
 
 #### Amazon Elastic Load Balancing
+
 Distribute traffic across multiple targets
 Supports one or more availability zones but only one region
 Three types
+
 - Application load balancer
 - Network LB
 - Classic LB
@@ -694,9 +725,10 @@ Roles - assume permissions for a task
 
 Policies in AWS IAM
 JSON doc that defines permissions for an AWS IAM identity (principal)
-Defines both AWS services that the identity can access and what actiosn they can perform
+Defines both AWS services that the identity can access and what actions they can perform
 
 ##### Best practices in IAM
+
 MFA - multi-factor auth
 Least Privilege Access - only users who are granted access that require it for their current tasks should have it
 
@@ -704,7 +736,7 @@ Least Privilege Access - only users who are granted access that require it for t
 
 Security Groups - Enables firewall-like controls for resource within VPC
 Network ACL's - controls inbound and outbound traffic for subnets within VPC
-Flow logs - captures info arround traffic within your VPC
+Flow logs - captures info around traffic within your VPC
 
 ##### Additional Security Services
 
@@ -719,26 +751,26 @@ Flow logs - captures info arround traffic within your VPC
 OS and additional software are provided in a AMI (Amazon machine image)
 Resources are provided by instance type
 Instances can store data in two ways
+
 - Instance store
   - only available while instance is running
 - Elastic Block Store (EBS)
   - persistent storage
 
-Types 
+Types
+
 - General Purpose
-- Comput, Memory, and Storage
+- Compute, Memory, and Storage
 - Accelerated computing
 
 Scaling
+
 - Vertical Scaling - some down time
 - Horizontal Scaling - launch instances to help scaling
-  - Auto-Scaling Group - 
+  - Auto-Scaling Group -
     - set of EC2 instances
     - Min/Max # of instances
     - Health checks on each instance
     - Scaling policies that define scaling behavior
     - Exists within 1 or more availability zones in a single region
   - Elastic Load Balancer
-
-#### AWS Lambda
-
